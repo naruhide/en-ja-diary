@@ -7,6 +7,7 @@ Most of the people who work using a PC probably use some kind of web browser.
 If so, I recommend that you always display the thesaurus site.
 For example, suppose someone always uses "so" when connecting sentences in a straightforward manner.
 Then, if you enter "so" on the thesaurus site, you will find more than 50 related words.
+
 You may say that you don't need it because you don't usually write sentences.
 However, if you have a rich stock of words, there are many merits, such as novels that you have felt difficult until now can easily come to your mind,
 and you can think deeper than before.
@@ -23,6 +24,7 @@ PCを使用して仕事をされている方の殆どは何かしらのWebブラ
 もしそうであれば、類語辞典サイトを常に表示しておくことをおすすめします。
 例えば、いつも文を順接でつなぐときに”だから”を用いている人がいたと仮定します。
 そこで類語辞典サイトで”だから”と入力してみると50以上もの関連語が見つかります。
+
 普段ほとんど文章を書かないから必要ないとおっしゃる方もいるかもしれません。
 ただ、言葉のストックが豊かであると、今まで難しいと感じていた小説がすんなりと頭に入ってきたり、考え事が以前よりも深くできるようになったりとメリットはたくさんあります。
 英語学習者はGoogle翻訳も開いておくとなお良いかもしれません。
