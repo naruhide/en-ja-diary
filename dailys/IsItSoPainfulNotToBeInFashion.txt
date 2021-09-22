@@ -1,4 +1,4 @@
-[en]
+[en-IsItSoPainfulNotToBeInFashion]
 This year's trend is monotone color. When I was walking around the city, I started to see many people wearing black clothes even though it was summer. 
 In fact, it has already been decided for several years that the city will be like this. Why is that?
 
@@ -14,10 +14,10 @@ If you feel a sense of loss or lack of solidarity, rest assured that it is just 
 I have no intention of arguing that it is bad to get on the trend.
 However, I recommend that you cultivate a perspective that captures the essence 
 that can be obtained by following a medium- to long-term cycle rather than a short-term visit cycle.
-[/en]
+[/en-IsItSoPainfulNotToBeInFashion]
 
 
-[ja]
+[ja-IsItSoPainfulNotToBeInFashion]
 今年の流行はモノトーンカラーだそうです。街を歩いていると夏であるのに黒基調の衣服を身にまとった人を多く見かけるようになりました。
 実は街がこのような光景になることは数年前から既に決まっていました。それはなぜでしょうか。
 
@@ -31,4 +31,4 @@ that can be obtained by following a medium- to long-term cycle rather than a sho
 もし、喪失感や連帯感の欠如を感じているのであれば、それは偶像に過ぎませんので安心して下さい。
 別に流行に乗ることが悪だと論じているつもりは毛頭ありません。
 ただ、短期的に訪れるサイクルではなく、中長期的なサイクルを追うことで得られる、本質を捉える目線を養うことを私はおすすめします。
-[/ja]
+[/ja-IsItSoPainfulNotToBeInFashion]

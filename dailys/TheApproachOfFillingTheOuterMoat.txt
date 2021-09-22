@@ -1,4 +1,4 @@
-[en]
+[en-TheApproachOfFillingTheOuterMoat]
 In other words, if you want to change something, do not apply force directly, 
 but take an approach that encourages the object to change unconsciously by applying force to the environment of the object.
 The advantage of this approach is that the object does not need to be aware of its changes.
@@ -12,10 +12,10 @@ If you don't want to throw it in the first place, that's a different story.
 The same is true for non-humans.
 If you're worried that your focus will be disrupted every time your smartphone's alarm sounds,
 simply avoid bringing your smartphone into your work room to improve efficiency.
-[/en]
+[/en-TheApproachOfFillingTheOuterMoat]
 
 
-[ja]
+[ja-TheApproachOfFillingTheOuterMoat]
 つまりは、何か対象を変化させたいならば直接力を作用させるのではなく、その対象の環境に力を加えることによって対象に無意識的な変化を促すようなアプローチを取るということです。
 このアプローチの利点は、対象物が自身の変化に気づく必要がない点にあります。
 
@@ -26,4 +26,4 @@ simply avoid bringing your smartphone into your work room to improve efficiency.
 そうすることで、ボールを投げたいという子供の欲求を満たしつつ、親の欲求も満たすことが可能です。そもそも投げないでほしいのであれば、話は別ですが。
 人間以外でも同様です。
 スマートフォンのアラームが鳴るたびに集中が寸断されてしまうことを気にしているなら、作業部屋にはスマートフォンを持ち込まないようにするだけで、効率が改善します。
-[/ja]
+[/ja-TheApproachOfFillingTheOuterMoat]
