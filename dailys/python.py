@@ -9,7 +9,10 @@ import webbrowser
 
 
 def auto_browsing():
-    """ Enter the url you want to open in the variable urls. The default browser registered on your PC will be launched. """
+    """
+    Enter the url you want to open in the variable urls.
+    The default browser registered on your PC will be launched.
+    """
 
     urls = (
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
@@ -23,10 +26,15 @@ def auto_browsing():
 
 
 def launch_apps():
-    """" Enter the full path of the app you want to launch in the variable app_absolute_paths """
+    """
+    Enter the full path of the app you want to launch in the variable app_absolute_paths
+    If you pass an argument at startup, write it in the tuple with an absolute path as well.
+    """
 
     app_absolute_paths = (
-        "/usr/bin/gedit",
+        ('/usr/bin/gedit', '/home/naruhide/Desktop/Memos/diary1.txt'),
+        ('ls', '-l'),
+        'ls',
     )
 
     for app in app_absolute_paths:
@@ -36,8 +44,8 @@ def launch_apps():
 def main():
     """ Adjust the function you want to use with comments. """
 
-    auto_browsing()
-    # launch_apps()
+    # auto_browsing()
+    launch_apps()
 
 
 if __name__ == "__main__":
