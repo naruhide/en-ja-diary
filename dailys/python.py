@@ -45,6 +45,7 @@ def launch_apps():
         print(err)
         sys.exit()
 
+
 def main():
     """ Adjust the function you want to use with comments. """
 
