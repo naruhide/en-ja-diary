@@ -27,12 +27,11 @@ function git_push () {
 }
 
 function main () {
-    ### Please adjust the function you want to use with comments. ###
+    ### Adjust the function you want to use with comments. ###
 
     # apt_system_maintenance
     git_push
-
-    echo 'Done'
 }
 
 main
+echo 'Done'
