@@ -20,6 +20,7 @@ def auto_browsing():
         'https://renso-ruigo.com/',
         'https://github.com/naruhide/en-ja-daily',
         'https://muumuu-mail.com/login',
+        'https://docs.python.org/3/library/index.html',
     )
 
     for url in urls:
