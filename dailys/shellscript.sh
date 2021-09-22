@@ -31,6 +31,8 @@ function main () {
 
     # apt_system_maintenance
     git_push
+
+    echo 'Done'
 }
 
 main
