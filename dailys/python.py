@@ -5,6 +5,7 @@ Usage:
 """
 
 import subprocess
+import sys
 import webbrowser
 
 
@@ -37,9 +38,12 @@ def launch_apps():
         'ls',
     )
 
-    for app in app_absolute_paths:
-        subprocess.Popen(app)
-
+    try:
+        for app in app_absolute_paths:
+            subprocess.Popen(app)
+    except FileNotFoundError as err:
+        print(err)
+        sys.exit()
 
 def main():
     """ Adjust the function you want to use with comments. """
