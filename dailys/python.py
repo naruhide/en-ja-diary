@@ -43,7 +43,8 @@ def main():
 
     # auto_browse()
     # launch_app()
-    print('Finish')
+
+    print('Done')
 
 
 if __name__ == "__main__":
