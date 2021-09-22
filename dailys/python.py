@@ -50,8 +50,8 @@ def launch_apps():
 def main():
     """ Adjust the function you want to use with comments. """
 
-    # auto_browsing()
-    launch_apps()
+    auto_browsing()
+    # launch_apps()
 
 
 if __name__ == "__main__":
