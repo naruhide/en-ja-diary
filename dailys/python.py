@@ -9,10 +9,7 @@ import webbrowser
 
 
 def auto_browsing():
-    """
-    Enter the url you want to open in the variable urls.
-    The default browser registered on your PC will be launched.
-    """
+    """ Enter the url you want to open in the variable urls. The default browser registered on your PC will be launched. """
 
     urls = (
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
