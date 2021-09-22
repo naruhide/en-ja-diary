@@ -14,7 +14,10 @@ def auto_browsing():
     """
 
     urls = (
-        'https://github.com/naruhide/my-util',
+        'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
+        'https://renso-ruigo.com/',
+        'https://github.com/naruhide/en-ja-daily',
+        'https://muumuu-mail.com/login',
     )
 
     for url in urls:
