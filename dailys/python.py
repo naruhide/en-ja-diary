@@ -1,3 +1,5 @@
+# python.py
+#!/usr/bin/env python3
 """
 Usage:
     It takes the form of calling each function from the main function at the end of the file.
@@ -48,7 +50,7 @@ def launch_apps():
 
 
 def main():
-    """ Adjust the function you want to use with comments. """
+    """Adjust the function you want to use with comments."""
 
     auto_browsing()
     # launch_apps()
