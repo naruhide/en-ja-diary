@@ -87,7 +87,7 @@ def unzip():
                 zf.extractall()
         else:
             print(f'{file} is not zip file format.')
-            return
+            continue
 
 
 def main():
