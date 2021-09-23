@@ -45,8 +45,7 @@ def launch_apps():
 
     app_absolute_paths = (
         ('/usr/bin/gedit', '/home/naruhide/Desktop/Memos/diary1.txt'),
-        ('ls', '-l'),
-        'ls',
+        '/snap/bin/pycharm-community',
     )
 
     try:
