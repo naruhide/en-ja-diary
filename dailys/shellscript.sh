@@ -11,8 +11,9 @@ function apt_system_maintenance () {
 
 function git_push () {
     # Prerequisite:
-    #     echo 'export GIT_USERNAME="your_github_username"' >> ~/.bashrc
-    #     echo 'export GIT_ACCESS_TOKEN="your_github_access_token"' >> ~/.bashrc
+    #    echo 'export GIT_USERNAME="your_github_username"' >> ~/.bashrc
+    #    echo 'export GIT_ACCESS_TOKEN="your_github_access_token"' >> ~/.bashrc
+    #    Restart Bash.
 
     git add .
     read -p 'Enter commit message: ' COMMIT_MESSAGE
