@@ -19,7 +19,7 @@ function git_push () {
     read -p 'Enter commit message: ' COMMIT_MESSAGE
     git commit -m "$COMMIT_MESSAGE"
     expect -c "
-    spawn git push -u origin master
+    spawn git push
     expect \"Username\" ; send \"$GIT_USERNAME\n\"
     expect \"Password\" ; send \"$GIT_ACCESS_TOKEN\n\"
     expect \"$\"
