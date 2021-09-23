@@ -1,9 +1,9 @@
-# python.py
 #!/usr/bin/env python3
+# python.py
 """
 Usage:
     It takes the form of calling each function from the main function at the end of the file.
-    All function names are described by default, so please customize by comment operation.
+    In the main function, all function names are described by default, so please customize by comment operation.
 """
 
 import subprocess
@@ -20,9 +20,10 @@ def auto_browsing():
     urls = (
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
         'https://renso-ruigo.com/',
-        'https://github.com/naruhide/en-ja-daily',
+        'https://github.com/naruhide/en-ja-daily/tree/master/dailys',
         'https://muumuu-mail.com/login',
-        'https://docs.python.org/3/library/index.html',
+        'https://docs.python.org/ja/3/library/index.html',
+        'https://pypi.org/search/',
     )
 
     for url in urls:
