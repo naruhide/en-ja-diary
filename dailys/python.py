@@ -62,6 +62,8 @@ def unzip():
 
     Example:
         python3 python.py --zipfile test1.zip test2.zip
+        python3 python.py --zipfile /home/testuser/doc/test1.zip
+        python3 python.py --zipfile ~/test1.zip /home/testuser/test2.zip
 
     Enter the following command on the command line to display the help page.
         python3 python.py -h
