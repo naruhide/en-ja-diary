@@ -6,9 +6,11 @@ Usage:
     In the main function, all function names are described by default, so please customize by comment operation.
 """
 
+import argparse
 import subprocess
 import sys
 import webbrowser
+import zipfile
 
 
 def auto_browsing():
@@ -34,6 +36,11 @@ def launch_apps():
     """
     Enter the full path of the app you want to launch in the variable app_absolute_paths
     If you pass an argument at startup, write it in the tuple with an absolute path as well.
+
+    Example:
+        ('/usr/bin/gedit', '/home/testuser/doc/test.txt')
+        ('ls', '-la')
+        ls
     """
 
     app_absolute_paths = (
@@ -50,11 +57,26 @@ def launch_apps():
         sys.exit()
 
 
+def unzip():
+    """"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--zipfile', nargs='*', help='Absolute path of the zip file you want to unzip. Multiple is possible.')
+    args = parser.parse_args()
+    zipfile_list = args.zipfile
+
+    for file in zipfile_list:
+        result = zipfile.is_zipfile(file)
+        if zipfile.is_zipfile(file):
+            zipfile.ZipFile.read()
+        else:
+            raise FileExistsError
+
 def main():
     """Adjust the function you want to use with comments."""
 
-    auto_browsing()
+    # auto_browsing()
     # launch_apps()
+    unzip()
 
 
 if __name__ == "__main__":
