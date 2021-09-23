@@ -9,7 +9,8 @@ Usage:
 import argparse
 import subprocess
 import webbrowser
-import zipfile
+from zipfile import is_zipfile
+from zipfile import ZipFile
 
 
 def auto_browsing():
@@ -84,8 +85,8 @@ def unzip():
     if zipfile_list is None:
         return
     for file in zipfile_list:
-        if zipfile.is_zipfile(file):
-            with zipfile.ZipFile(file) as zf:
+        if is_zipfile(file):
+            with ZipFile(file) as zf:
                 zf.extractall()
         else:
             print(f'{file} is not zip file format.')
@@ -97,7 +98,7 @@ def main():
 
     # auto_browsing()
     # launch_apps()
-    unzip()
+    # unzip()
 
 
 if __name__ == "__main__":
