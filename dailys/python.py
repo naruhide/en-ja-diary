@@ -57,8 +57,14 @@ def launch_apps():
 
 def unzip():
     """
-    Unzip the zip file to the same hierarchy where you ran the python file.
+    Unzip the zip file to the same hierarchy where you ran this python file.
     The function to unzip the password-protected zip file has not been implemented yet.
+
+    Example:
+        python3 python.py --zipfile test1.zip test2.zip
+
+    Enter the following command on the command line to display the help page.
+        python3 python.py -h
     """
     # TODO: Function addition
     # Measures against garbled characters.
@@ -88,8 +94,8 @@ def main():
     """Adjust the function you want to use with comments."""
 
     # auto_browsing()
-    launch_apps()
-    # unzip()
+    # launch_apps()
+    unzip()
 
 
 if __name__ == "__main__":
