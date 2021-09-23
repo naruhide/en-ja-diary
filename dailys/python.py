@@ -67,18 +67,18 @@ def unzip():
     # parser.add_argument('--password', nargs='*' ,help='Password set in the zip file. If you use this option, limit the zipfile option to one.')
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--zipfile', nargs='*',
-                        help='Absolute path of the zip file you want to unzip. Multiple is possible.')
+    parser.add_argument('--zipfile', nargs='*', help='Absolute or relative path of the zip file you want to unzip. Multiple is possible.')
     args = parser.parse_args()
     zipfile_list = args.zipfile
 
     if zipfile_list is None:
-        raise FileNotFoundError
+        return
     for file in zipfile_list:
         if zipfile.is_zipfile(file):
-            zipfile.ZipFile.extractall()
+            with zipfile.ZipFile(file) as zf:
+                zf.extractall()
         else:
-            raise FileExistsError
+            raise # NotInZipFormatError <- Define own error type.
 
 
 def main():
