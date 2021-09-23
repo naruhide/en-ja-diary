@@ -13,6 +13,19 @@ from zipfile import is_zipfile
 from zipfile import ZipFile
 
 
+def add_summary_to_readme():
+    """
+
+    """
+    # TODO: Automatic maintenance of README
+    # 1 Specify a directory.
+    #
+    # 2 Hit the API of Github to create a dictionary-type list with the file name as the key and the summary described
+    #   in the first line of the file as data.
+    #
+    # 3 Write to README.
+
+
 def auto_browsing():
     """
     Enter the url you want to open in the variable urls.
