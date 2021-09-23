@@ -57,18 +57,23 @@ def launch_apps():
 
 
 def unzip():
-    """"""
+    """
+
+    """
+    #
     parser = argparse.ArgumentParser()
     parser.add_argument('--zipfile', nargs='*', help='Absolute path of the zip file you want to unzip. Multiple is possible.')
+    parser.add_argument('--password', help='Password set in the zip file. If you use this option, limit the zipfile option to one.')
     args = parser.parse_args()
     zipfile_list = args.zipfile
+    password = args.password
 
     for file in zipfile_list:
-        result = zipfile.is_zipfile(file)
         if zipfile.is_zipfile(file):
-            zipfile.ZipFile.read()
+            zipfile.ZipFile.extractall()
         else:
             raise FileExistsError
+
 
 def main():
     """Adjust the function you want to use with comments."""
