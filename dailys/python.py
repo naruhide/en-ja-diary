@@ -43,8 +43,8 @@ def launch_apps():
     """
 
     app_absolute_paths = (
-        '/snap/bin/pycharm-communit',
         ('/usr/bin/gedit', '/home/naruhide/Desktop/Memos/diary1.txt'),
+        '/snap/bin/pycharm-communit',
     )
 
     for app in app_absolute_paths:
