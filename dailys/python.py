@@ -57,7 +57,8 @@ def launch_apps():
 
 def unzip():
     """
-
+    Unzip the zip file to the same hierarchy where you ran the python file.
+    The function to unzip the password-protected zip file has not been implemented yet.
     """
     # TODO: Function addition
     # Measures against garbled characters.
