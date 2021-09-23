@@ -23,7 +23,7 @@ def auto_browsing():
         'https://github.com/naruhide/en-ja-daily/tree/master/dailys',
         'https://muumuu-mail.com/login',
         'https://docs.python.org/ja/3/library/index.html',
-        'https://pypi.org/search/',
+        'https://docs.ansible.com/ansible/2.9_ja/#',
     )
 
     for url in urls:
