@@ -43,16 +43,16 @@ def launch_apps():
     """
 
     app_absolute_paths = (
+        '/snap/bin/pycharm-communit',
         ('/usr/bin/gedit', '/home/naruhide/Desktop/Memos/diary1.txt'),
-        '/snap/bin/pycharm-community',
     )
 
-    try:
-        for app in app_absolute_paths:
+    for app in app_absolute_paths:
+        try:
             subprocess.Popen(app)
-    except FileNotFoundError as err:
-        print(err)
-        return
+        except FileNotFoundError as err:
+            print(err)
+            continue
 
 
 def unzip():
@@ -88,8 +88,8 @@ def main():
     """Adjust the function you want to use with comments."""
 
     # auto_browsing()
-    # launch_apps()
-    unzip()
+    launch_apps()
+    # unzip()
 
 
 if __name__ == "__main__":
