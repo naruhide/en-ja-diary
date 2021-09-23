@@ -79,7 +79,8 @@ def unzip():
             with zipfile.ZipFile(file) as zf:
                 zf.extractall()
         else:
-            raise  # TODO: NotInZipFormatError <- Define own error type.
+            print(f'{file} is not zip file format.')
+            return
 
 
 def main():
