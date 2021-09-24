@@ -20,6 +20,7 @@ from github import Github
 def add_summary_to_readme():
     """
     Purpose:
+        Automatically update the README.md.
     Prerequisite:
         echo 'export GIT_ACCESS_TOKEN="your_github_access_token"' >> ~/.bashrc
         Restart bash.
@@ -33,20 +34,35 @@ def add_summary_to_readme():
     repo = gh.get_repo(github_owner_and_repo_name)
     contents = repo.get_contents(target_dir)
 
-    # local_num_of_files = len(os.listdir('/home/naruhide/Desktop/en-ja-diary/diaries'))
-    # remote_num_of_files = len(contents)
-    # if local_num_of_files != remote_num_of_files:
-    #     pass
-    # else:
-    #     pass
-
+    content_file_paths = []
+    summaries = []
     while contents:
-        file_content = contents.pop(0)
-        print(file_content.path)
+        content_file = contents.pop(0)
 
-    # bytes_content = file_content.decoded_content
-    # str_content = bytes_content.decode('utf-8')
-    # print(str_content)
+        content_file_path_after_trimming_dir = content_file.path[len(target_dir) + 1:]  # '1' is '/'.
+        content_file_paths.append(content_file_path_after_trimming_dir)
+
+        bytes_content = content_file.decoded_content
+        str_content = bytes_content.decode('utf-8')
+        lines = str_content.split('\n')
+        summary_row = lines[0]  # TODO: Extracts an element containing a specific character from the array.
+        summary = summary_row.lstrip()  # TODO: Remove [summary] and 1 blank.
+        summaries.append(summary)
+
+    if len(content_file_paths) != len(summaries):
+        print('The number of files and the number of summaries do not match. Review the summary in the file.')
+        return
+
+    correspondence_table = dict(zip(content_file_paths, summaries))
+
+    readme = repo.get_readme()
+    bytes_readme_content = readme.decoded_content
+    str_readme_content = bytes_readme_content.decode('utf-8')
+    while correspondence_table:
+        str_readme_content.join(correspondence_table.keys())
+        str_readme_content.join(correspondence_table.values())
+
+    readme.update()
 
 
 def auto_browsing():
