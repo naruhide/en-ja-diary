@@ -1,4 +1,4 @@
-[summary] ...
+[summary] Continue steadily.
 [ja]
 CHAPTER0　英文法の歩き方
 １，基本文型
