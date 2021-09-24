@@ -1,5 +1,5 @@
 #!/bin/bash -vx
-# [summary] ...
+# [summary] Shellscript function collection for automation.
 
 function apt_system_maintenance () {
       echo -e "\n$(date "+%d-%m-%Y --- %T") --- Starting work\n"
