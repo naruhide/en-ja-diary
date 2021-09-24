@@ -44,13 +44,13 @@ def add_summary_to_readme():
 
         bytes_content = content_file.decoded_content
         str_content = bytes_content.decode('utf-8')
-        lines = str_content.split('\n')
-        summary_row = lines[0]  # TODO: Extracts an element containing a specific character from the array.
-        summary = summary_row.lstrip()  # TODO: Remove [summary] and 1 blank.
+        rows = str_content.split('\n')
+        summary_row = rows[0]  # TODO: Extracts an element containing a specific character from the array.
+        summary = summary_row.lstrip()  # TODO: Remove [summary].
         summaries.append(summary)
 
     if len(content_file_paths) != len(summaries):
-        print('The number of files and the number of summaries do not match. Review the summary in the file.')
+        print('The number of files and summaries do not match. Review the summary in the file.')
         return
 
     correspondence_table = dict(zip(content_file_paths, summaries))
