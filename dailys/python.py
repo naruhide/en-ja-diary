@@ -35,9 +35,10 @@ def auto_browsing():
     urls = (
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
         'https://renso-ruigo.com/',
-        'https://github.com/naruhide/en-ja-daily/tree/master/dailys',
         'https://muumuu-mail.com/login',
+        'https://github.com/naruhide/en-ja-daily/tree/master/dailys',
         'https://docs.python.org/ja/3/library/index.html',
+        'https://wiki.python.org/moin/UsefulModules',
         'https://docs.ansible.com/ansible/2.9_ja/#',
     )
 
@@ -58,7 +59,7 @@ def launch_apps():
 
     app_absolute_paths = (
         ('/usr/bin/gedit', '/home/naruhide/Desktop/Memos/diary1.txt'),
-        '/snap/bin/pycharm-communit',
+        '/snap/bin/pycharm-community',
     )
 
     for app in app_absolute_paths:
@@ -110,7 +111,7 @@ def main():
     """Adjust the function you want to use with comments."""
 
     # add_summary_to_readme()
-    # auto_browsing()
+    auto_browsing()
     # launch_apps()
     # unzip()
 
