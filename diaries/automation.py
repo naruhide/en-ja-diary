@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# [summary] ...
+# [summary] Python function collection for automation.
 """
 Description:
     This file is a collection of functions that help automate routine tasks.
