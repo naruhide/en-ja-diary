@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# python.py
 """
-Usage:
-    It takes the form of calling each function from the main function at the end of the file.
-    In the main function, all function names are described by default, so please customize by comment operation.
+Description:
+    This file is a collection of functions that help automate routine tasks.
+    Each function dares to tolerate code duplication and redundancy to avoid dependencies from other functions.
+    Each function is called from the main function at the bottom of the file, so please customize it freely.
 """
 
 import argparse
@@ -15,6 +15,7 @@ from zipfile import ZipFile
 
 def add_summary_to_readme():
     """
+    Purpose:
 
     """
     # TODO: Automatic maintenance of README
@@ -28,8 +29,11 @@ def add_summary_to_readme():
 
 def auto_browsing():
     """
-    Enter the url you want to open in the variable urls.
-    The default browser registered on your PC will be launched.
+    Purpose:
+        Open all the usual pages together.
+    Usage:
+        Enter the url you want to open in the variable urls.
+        The default browser registered on your PC will be launched.
     """
 
     urls = (
@@ -48,9 +52,11 @@ def auto_browsing():
 
 def launch_apps():
     """
-    Enter the full path of the app you want to launch in the variable app_absolute_paths
-    If you pass an argument at startup, write it in the tuple with an absolute path as well.
-
+    Purpose:
+        Launch apps in bulk.
+    Usage:
+        Enter the full path of the app you want to launch in the variable app_absolute_paths.
+        If you pass an argument at startup, write it in the tuple with an absolute path as well.
     Example:
         ('/usr/bin/gedit', '/home/testuser/doc/test.txt')
         ('ls', '-la')
@@ -72,16 +78,16 @@ def launch_apps():
 
 def unzip():
     """
-    Unzip the zip file to the same hierarchy where you ran this python file.
-    The function to unzip the password-protected zip file has not been implemented yet.
-
+    Purpose:
+        Unzip the zip file to the same hierarchy where you ran this python file.
+    Usage:
+        Enter the following command on the command line to display the help page.
+            python3 python.py -h
     Example:
         python3 python.py --zipfile test1.zip test2.zip
         python3 python.py --zipfile /home/testuser/doc/test1.zip
         python3 python.py --zipfile ~/test1.zip /home/testuser/test2.zip
 
-    Enter the following command on the command line to display the help page.
-        python3 python.py -h
     """
     # TODO: Function addition
     # Measures against garbled characters.
@@ -108,7 +114,7 @@ def unzip():
 
 
 def main():
-    """Adjust the function you want to use with comments."""
+    """ Adjust the function you want to use with comments. """
 
     # add_summary_to_readme()
     auto_browsing()
