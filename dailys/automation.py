@@ -113,13 +113,21 @@ def unzip():
             continue
 
 
+def dummy_add_func(a, b):
+    return a + b
+
+
 def main():
     """ Adjust the function you want to use with comments. """
+    import doctest
+    doctest.testmod(verbose=True)
 
     # add_summary_to_readme()
     auto_browsing()
     # launch_apps()
     # unzip()
+
+    print(dummy_add_func(1, 2))
 
 
 if __name__ == "__main__":
