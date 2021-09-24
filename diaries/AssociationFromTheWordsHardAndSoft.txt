@@ -1,4 +1,4 @@
-[summary] ...
+[summary] Only drifts like a jellyfish.
 [en]
 From the programmer's point of view, I was driven by the desire to enumerate expressions that can be associated with the words "hard" and "soft",
 so I will write them here.
