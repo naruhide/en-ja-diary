@@ -1,4 +1,5 @@
 #!/bin/bash -vx
+# [summary] ...
 
 function apt_system_maintenance () {
       echo -e "\n$(date "+%d-%m-%Y --- %T") --- Starting work\n"

@@ -1,4 +1,5 @@
-[en-ThesaurusRecommendation]
+[summary] ...
+[en]
 Humans use words as they are or in combination within the range of words they have seen and heard in the past.
 Writing a sentence does improve your writing skills, but it means that you have improved your ability to output known words well as sentences.
 
@@ -12,10 +13,10 @@ You may say that you don't need it because you don't usually write sentences.
 However, if you have a rich stock of words, there are many merits, such as novels that you have felt difficult until now can easily come to your mind,
 and you can think deeper than before.
 English learners may want to keep Google Translate open as well.
-[/en-ThesaurusRecommendation]
+[/en]
 
 
-[ja-ThesaurusRecommendation]
+[ja]
 人間は過去に見聞きした言葉の範囲でそのまま、もしくは組み合わせて言葉を使用しています。
 文章を書くことで文章力は確かに上達しますが、それは既知の言葉を文として上手にアウトプットできる能力が向上したということを意味します。
 
@@ -28,4 +29,4 @@ PCを使用して仕事をされている方の殆どは何かしらのWebブラ
 普段ほとんど文章を書かないから必要ないとおっしゃる方もいるかもしれません。
 ただ、言葉のストックが豊かであると、今まで難しいと感じていた小説がすんなりと頭に入ってきたり、考え事が以前よりも深くできるようになったりとメリットはたくさんあります。
 英語学習者はGoogle翻訳も開いておくとなお良いかもしれません。
-[/ja-ThesaurusRecommendation]
+[/ja]

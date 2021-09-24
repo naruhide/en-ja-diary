@@ -1,4 +1,5 @@
-[ja-english_grammar_for_100_million_people]
+[summary] ...
+[ja]
 CHAPTER0　英文法の歩き方
 １，基本文型
 　基本型は他動型、自動型、説明型、授与型の4つ
@@ -35,4 +36,4 @@ CHAPTER16　時表現
 CHAPTER17　接続詞
 CHAPTER18　流れを整える
 
-[/ja-english_grammar_for_100_million_people]
+[/ja]

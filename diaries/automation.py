@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# [summary] ...
 """
 Description:
     This file is a collection of functions that help automate routine tasks.
@@ -24,20 +25,26 @@ def add_summary_to_readme():
         Restart bash.
     """
 
-    github_owner_and_repo_name = 'naruhide/en-ja-daily'
+    github_owner_and_repo_name = 'naruhide/en-ja-diary'
     access_token = os.environ['GIT_ACCESS_TOKEN']
+    target_dir = 'diaries'
 
     gh = Github(access_token)
     repo = gh.get_repo(github_owner_and_repo_name)
-    contents = repo.get_contents('dailys')
+    contents = repo.get_contents(target_dir)
+
+    # local_num_of_files = len(os.listdir('/home/naruhide/Desktop/en-ja-diary/diaries'))
+    # remote_num_of_files = len(contents)
+    # if local_num_of_files != remote_num_of_files:
+    #     pass
+    # else:
+    #     pass
+
     while contents:
         file_content = contents.pop(0)
-        if file_content.type == 'dir':
-            contents.extend(repo.get_contents(file_content.path))
-        else:
-            print(file_content)
+        print(file_content.path)
 
-    # bytes_content = contents.decoded_content
+    # bytes_content = file_content.decoded_content
     # str_content = bytes_content.decode('utf-8')
     # print(str_content)
 

@@ -1,4 +1,5 @@
-[en-AssociationFromTheWordsHardAndSoft]
+[summary] ...
+[en]
 From the programmer's point of view, I was driven by the desire to enumerate expressions that can be associated with the words "hard" and "soft",
 so I will write them here.
 
@@ -14,10 +15,10 @@ In other words, it depends on the time and the case, but that's it, but personal
 I think that "soft" is better because it has a wider range of application.
 It's no secret that software isn't perfect, but that's right, assuming that software provides value to people.
 I think it's quite natural that the demands on software change because the people who use it are constantly changing creatures.
-[/en-AssociationFromTheWordsHardAndSoft]
+[/en]
 
 
-[ja-AssociationFromTheWordsHardAndSoft]
+[ja]
 プログラマからの視点で、”固い”と”柔らかい”という言葉から連想できる表現を羅列したいという欲求に駆られたのでここに記します。
 
 ”固い”
@@ -30,4 +31,4 @@ I think it's quite natural that the demands on software change because the peopl
 とどのつまり時と場合による、と言ってしまえばそれでお終いですが、個人的には”柔らかい”の方が適応範囲が広い想像が働くので良いと思います。
 ソフトウェアに完成はないということはよく知られたことですが、正にその通りで、ソフトウェアが人に価値を提供するものだと仮定すれば、
 使用する側の人間が絶えず変化する生き物であるため、ソフトウェアへの要求が変化するのは至極自然な考え方だと思います。
-[/ja-AssociationFromTheWordsHardAndSoft]
+[/ja]

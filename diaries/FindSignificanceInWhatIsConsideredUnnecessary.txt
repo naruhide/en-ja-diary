@@ -1,8 +1,9 @@
-[en-FindSignificanceInWhatIsConsideredUnnecessary]
+[summary] ...
+[en]
 
-[/en-FindSignificanceInWhatIsConsideredUnnecessary]
+[/en]
 
 
-[ja-FindSignificanceInWhatIsConsideredUnnecessary]
+[ja]
 
-[/ja-FindSignificanceInWhatIsConsideredUnnecessary]
+[/ja]
