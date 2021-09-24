@@ -58,9 +58,9 @@ def launch_apps():
         Enter the full path of the app you want to launch in the variable app_absolute_paths.
         If you pass an argument at startup, write it in the tuple with an absolute path as well.
     Example:
-        ('/usr/bin/gedit', '/home/testuser/doc/test.txt')
-        ('ls', '-la')
-        ls
+        ('/usr/bin/gedit', '/home/testuser/doc/test.txt') # Pass arguments to gedit.
+        ('ls', '-la')                                     # Pass options to ls command.
+        ls                                                # Tuples are not needed if there are no arguments or options.
     """
 
     app_absolute_paths = (
@@ -113,21 +113,13 @@ def unzip():
             continue
 
 
-def dummy_add_func(a, b):
-    return a + b
-
-
 def main():
     """ Adjust the function you want to use with comments. """
-    import doctest
-    doctest.testmod(verbose=True)
 
     # add_summary_to_readme()
-    auto_browsing()
+    # auto_browsing()
     # launch_apps()
     # unzip()
-
-    print(dummy_add_func(1, 2))
 
 
 if __name__ == "__main__":
