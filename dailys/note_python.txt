@@ -1,5 +1,0 @@
-Sphinx
-https://www.sphinx-doc.org
-
-Read the Docs
-https://readthedocs.org
