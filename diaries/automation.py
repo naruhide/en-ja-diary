@@ -9,6 +9,7 @@ Description:
 
 import argparse
 import os
+import re
 import subprocess
 import webbrowser
 from zipfile import is_zipfile
@@ -24,6 +25,8 @@ def add_summary_to_readme():
     Prerequisite:
         echo 'export GIT_ACCESS_TOKEN="your_github_access_token"' >> ~/.bashrc
         Restart bash.
+    Description:
+        ...
     """
 
     github_owner_and_repo_name = 'naruhide/en-ja-diary'
@@ -44,25 +47,30 @@ def add_summary_to_readme():
 
         bytes_content = content_file.decoded_content
         str_content = bytes_content.decode('utf-8')
-        rows = str_content.split('\n')
-        summary_row = rows[0]  # TODO: Extracts an element containing a specific character from the array.
-        summary = summary_row.lstrip()  # TODO: Remove [summary].
-        summaries.append(summary)
+        summary_obj = re.search(r'\[summary]\s.*', str_content)  # Extract summary.
+        try:
+            summary = summary_obj.group(0)
+        except AttributeError as err:
+            print(err)
+            continue
+        summary_with_blank_in_front = re.sub(r'\[summary]\s', '    ', summary)  # Adjust the appearance.
+        summaries.append(summary_with_blank_in_front)
 
     if len(content_file_paths) != len(summaries):
         print('The number of files and summaries do not match. Review the summary in the file.')
         return
 
     correspondence_table = dict(zip(content_file_paths, summaries))
+    print(correspondence_table)
 
-    readme = repo.get_readme()
-    bytes_readme_content = readme.decoded_content
-    str_readme_content = bytes_readme_content.decode('utf-8')
-    while correspondence_table:
-        str_readme_content.join(correspondence_table.keys())
-        str_readme_content.join(correspondence_table.values())
+    # readme = repo.get_readme()
+    # bytes_readme_content = readme.decoded_content
+    # str_readme_content = bytes_readme_content.decode('utf-8')
+    # while correspondence_table:
+    #     str_readme_content.join(correspondence_table.keys())
+    #     str_readme_content.join(correspondence_table.values())
 
-    readme.update()
+    # readme.update()
 
 
 def auto_browsing():
