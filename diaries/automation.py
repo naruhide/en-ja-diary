@@ -57,9 +57,10 @@ def add_summary_to_readme():
         except AttributeError as err:
             print(err)
             continue
-        summary_with_two_blanks_at_the_end = summary + '  '
-        summary_for_markdown_notation = re.sub(r'\[summary]\s', '--> ', summary_with_two_blanks_at_the_end)
-        summaries.append(summary_for_markdown_notation)
+        else:
+            summary_with_two_blanks_at_the_end = summary + '  '
+            summary_for_markdown_notation = re.sub(r'\[summary]\s', '--> ', summary_with_two_blanks_at_the_end)
+            summaries.append(summary_for_markdown_notation)
 
     if len(content_file_paths) != len(summaries):
         print('The number of files and summaries do not match. Review the summary in the file.')
@@ -83,8 +84,8 @@ def add_summary_to_readme():
     except AttributeError as err:
         print(err)
         return
-
-    full_text = description_sector + '### Summary\n' + summary_sector
+    else:
+        full_text = description_sector + '### Summary\n' + summary_sector
 
     # STEP5: Re-create README.md.
     repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
@@ -183,8 +184,8 @@ def main():
         Adjust the function you want to use with comments.
     """
 
-    add_summary_to_readme()
-    # auto_browsing()
+    # add_summary_to_readme()
+    auto_browsing()
     # launch_apps()
     # unzip()
 
