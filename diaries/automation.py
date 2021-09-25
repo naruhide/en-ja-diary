@@ -55,8 +55,8 @@ def add_summary_to_readme():
             print(err)
             continue
         summary_with_two_blanks_at_the_end = summary + '  '
-        summary_with_blank_in_front = re.sub(r'\[summary]\s', '--> ', summary_with_two_blanks_at_the_end)
-        summaries.append(summary_with_blank_in_front)
+        summary_for_markdown_notation = re.sub(r'\[summary]\s', '--> ', summary_with_two_blanks_at_the_end)
+        summaries.append(summary_for_markdown_notation)
 
     if len(content_file_paths) != len(summaries):
         print('The number of files and summaries do not match. Review the summary in the file.')
@@ -83,9 +83,8 @@ def add_summary_to_readme():
 
     full_text = description_sector + '\n' + summary_sector
 
-    # TODO: Give idempotence.
-    # repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
-    # repo.create_file('README.md', 'Update README.md', full_text, branch='master')
+    repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
+    repo.create_file('README.md', 'Update README.md', full_text, branch='master')
 
 
 def auto_browsing():
