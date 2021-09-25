@@ -43,8 +43,8 @@ def add_summary_to_readme():
         content_file = contents.pop(0)
 
         content_file_path_after_trimming_dir = content_file.path[len(target_dir) + 1:]  # '1' is '/'.
-        content_file_path_with_two_blanks_at_the_end = content_file_path_after_trimming_dir + '  '
-        content_file_paths.append(content_file_path_with_two_blanks_at_the_end)
+        content_file_path_for_markdown_notation = '1. ' + content_file_path_after_trimming_dir + '  '
+        content_file_paths.append(content_file_path_for_markdown_notation)
 
         bytes_content = content_file.decoded_content
         str_content = bytes_content.decode('utf-8')
