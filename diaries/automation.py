@@ -74,6 +74,7 @@ def add_summary_to_readme():
     bytes_readme_content = readme.decoded_content
     str_readme_content = bytes_readme_content.decode('utf-8')
 
+    # TODO: Extract only description sector.
     description_obj = re.search(r'###\sDescription.*', str_readme_content, flags=re.DOTALL)
     try:
         description_sector = description_obj.group(0)
@@ -81,8 +82,8 @@ def add_summary_to_readme():
         print(err)
         return
 
+    print(description_sector)
     full_text = description_sector + '\n' + summary_sector
-    print(full_text)
 
     # repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
     # repo.create_file('README.md', 'Update README.md', full_text, branch='master')
