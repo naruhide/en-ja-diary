@@ -152,10 +152,13 @@ def unzip():
 
 
 def main():
-    """ Adjust the function you want to use with comments. """
+    """
+    Description:
+        Adjust the function you want to use with comments.
+    """
 
-    # add_summary_to_readme()
-    auto_browsing()
+    add_summary_to_readme()
+    # auto_browsing()
     # launch_apps()
     # unzip()
 
