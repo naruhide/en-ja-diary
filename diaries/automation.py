@@ -74,7 +74,6 @@ def add_summary_to_readme():
     bytes_readme_content = readme.decoded_content
     str_readme_content = bytes_readme_content.decode('utf-8')
 
-    # TODO: Extract only description sector.
     description_obj = re.search(r'###\sDescription.*\n{2}', str_readme_content, flags=re.DOTALL)
     try:
         description_sector = description_obj.group(0)
