@@ -61,11 +61,11 @@ def add_summary_to_readme():
         return
 
     correspondence_table = dict(zip(content_file_paths, summaries))
-    print(correspondence_table)
 
-    # readme = repo.get_readme()
-    # bytes_readme_content = readme.decoded_content
-    # str_readme_content = bytes_readme_content.decode('utf-8')
+    readme = repo.get_readme()
+    bytes_readme_content = readme.decoded_content
+    str_readme_content = bytes_readme_content.decode('utf-8')
+    print(str_readme_content)
     # while correspondence_table:
     #     str_readme_content.join(correspondence_table.keys())
     #     str_readme_content.join(correspondence_table.values())
