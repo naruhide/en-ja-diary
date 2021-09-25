@@ -83,10 +83,9 @@ def add_summary_to_readme():
         return
 
     full_text = description_sector + '### Summary\n' + summary_sector
-    print(full_text)
 
-    # repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
-    # repo.create_file('README.md', 'Update README.md', full_text, branch='master')
+    repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
+    repo.create_file('README.md', 'Update README.md', full_text, branch='master')
 
 
 def auto_browsing():
