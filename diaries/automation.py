@@ -55,7 +55,7 @@ def add_summary_to_readme():
             print(err)
             continue
         summary_with_two_blanks_at_the_end = summary + '  '
-        summary_with_blank_in_front = re.sub(r'\[summary]\s', '  --> ', summary_with_two_blanks_at_the_end)
+        summary_with_blank_in_front = re.sub(r'\[summary]\s', '      --> ', summary_with_two_blanks_at_the_end)
         summaries.append(summary_with_blank_in_front)
 
     if len(content_file_paths) != len(summaries):
