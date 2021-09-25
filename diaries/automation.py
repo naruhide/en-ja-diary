@@ -81,7 +81,8 @@ def add_summary_to_readme():
 
     full_text = description_sector + '\n' + summary_sector
 
-    # full_text -> bytes_whole_sentences -> readme.content
+    print(readme.raw_data)
+    # full_text -> bytes_full_text -> write readme class -> update readme
     # readme.update()
 
 
