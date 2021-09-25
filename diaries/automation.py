@@ -8,7 +8,6 @@ Description:
 """
 
 import argparse
-import base64
 import os
 import re
 import subprocess
@@ -44,7 +43,8 @@ def add_summary_to_readme():
         content_file = contents.pop(0)
 
         content_file_path_after_trimming_dir = content_file.path[len(target_dir) + 1:]  # '1' is '/'.
-        content_file_paths.append(content_file_path_after_trimming_dir)
+        content_file_path_with_two_blanks_at_the_end = content_file_path_after_trimming_dir + '  '
+        content_file_paths.append(content_file_path_with_two_blanks_at_the_end)
 
         bytes_content = content_file.decoded_content
         str_content = bytes_content.decode('utf-8')
@@ -54,7 +54,8 @@ def add_summary_to_readme():
         except AttributeError as err:
             print(err)
             continue
-        summary_with_blank_in_front = re.sub(r'\[summary]\s', '  --> ', summary)  # Adjust the appearance.
+        summary_with_two_blanks_at_the_end = summary + '  '
+        summary_with_blank_in_front = re.sub(r'\[summary]\s', '  --> ', summary_with_two_blanks_at_the_end)
         summaries.append(summary_with_blank_in_front)
 
     if len(content_file_paths) != len(summaries):
@@ -81,17 +82,7 @@ def add_summary_to_readme():
         return
 
     full_text = description_sector + '\n' + summary_sector
-
     repo.update_file(readme.path, 'Update README.md', full_text, readme.sha, branch='master')
-
-    # bytes_full_text = full_text.encode()
-    # base64_full_text = base64.b64encode(bytes_full_text)
-    # readme.content = base64_full_text
-    # print(readme.content)
-
-    # TODO: full_text -> encode bytes -> encode base64 -> rewrite readme content -> update readme
-    # TODO: readme.content property can't set.
-    # print(readme.update())
 
 
 def auto_browsing():
