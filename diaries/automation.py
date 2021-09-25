@@ -26,7 +26,7 @@ def add_summary_to_readme():
         echo 'export GIT_ACCESS_TOKEN="your_github_access_token"' >> ~/.bashrc
         Restart bash.
     Description:
-        ...
+        Keep the README.md up-to-date by extracting the name of each file and the summary contained within the file.
     """
 
     github_owner_and_repo_name = 'naruhide/en-ja-diary'
