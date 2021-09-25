@@ -82,7 +82,11 @@ def add_summary_to_readme():
         return
 
     full_text = description_sector + '\n' + summary_sector
-    repo.update_file(readme.path, 'Update README.md', full_text, readme.sha, branch='master')
+
+    # TODO: Give idempotence.
+    # delete readme -> create readme -> update readme with full_text
+
+    # repo.update_file(readme.path, 'Update README.md', full_text, readme.sha, branch='master')
 
 
 def auto_browsing():
