@@ -29,14 +29,17 @@ def add_summary_to_readme():
         Keep the README.md up-to-date by extracting the name of each file and the summary contained within the file.
     """
 
+    # STEP1: Prepare param.
     github_owner_and_repo_name = 'naruhide/en-ja-diary'
     access_token = os.environ['GIT_ACCESS_TOKEN']
     target_dir = 'diaries'
 
+    # STEP2: Get all files under the specified directory.
     gh = Github(access_token)
     repo = gh.get_repo(github_owner_and_repo_name)
     contents = repo.get_contents(target_dir)
 
+    # STEP3: Extract each file path and summary.
     content_file_paths = []
     summaries = []
     while contents:
@@ -64,6 +67,7 @@ def add_summary_to_readme():
 
     correspondence_table = dict(zip(content_file_paths, summaries))
 
+    # STEP4: Create the full text by concatenating the character strings of each sector.
     summary_list = []
     for key, item in correspondence_table.items():
         summary_list.append(key)
@@ -73,7 +77,6 @@ def add_summary_to_readme():
     readme = repo.get_readme()
     bytes_readme_content = readme.decoded_content
     str_readme_content = bytes_readme_content.decode('utf-8')
-
     description_obj = re.search(r'###\sDescription.*\n{2}', str_readme_content, flags=re.DOTALL)
     try:
         description_sector = description_obj.group(0)
@@ -83,6 +86,7 @@ def add_summary_to_readme():
 
     full_text = description_sector + '### Summary\n' + summary_sector
 
+    # STEP5: Re-create README.md.
     repo.delete_file(readme.path, 'Delete README.md temporarily', sha=readme.sha, branch='master')
     repo.create_file('README.md', 'Update README.md', full_text, branch='master')
 
