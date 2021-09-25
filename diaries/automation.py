@@ -78,7 +78,7 @@ def auto_browsing():
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
         'https://renso-ruigo.com/',
         'https://muumuu-mail.com/login',
-        'https://github.com/naruhide/en-ja-daily/tree/master/dailys',
+        'https://github.com/naruhide/en-ja-diary/tree/master/diaries',
         'https://docs.python.org/ja/3/library/index.html',
         'https://wiki.python.org/moin/UsefulModules',
         'https://docs.ansible.com/ansible/2.9_ja/#',
@@ -154,8 +154,8 @@ def unzip():
 def main():
     """ Adjust the function you want to use with comments. """
 
-    add_summary_to_readme()
-    # auto_browsing()
+    # add_summary_to_readme()
+    auto_browsing()
     # launch_apps()
     # unzip()
 
