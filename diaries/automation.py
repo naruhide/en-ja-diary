@@ -8,6 +8,7 @@ Description:
 """
 
 import argparse
+import base64
 import os
 import re
 import subprocess
@@ -81,9 +82,16 @@ def add_summary_to_readme():
 
     full_text = description_sector + '\n' + summary_sector
 
-    print(readme.encoding)
+    repo.update_file(readme.path, 'Update README.md', full_text, readme.sha, branch='master')
+
+    # bytes_full_text = full_text.encode()
+    # base64_full_text = base64.b64encode(bytes_full_text)
+    # readme.content = base64_full_text
+    # print(readme.content)
+
     # TODO: full_text -> encode bytes -> encode base64 -> rewrite readme content -> update readme
-    # readme.update()
+    # TODO: readme.content property can't set.
+    # print(readme.update())
 
 
 def auto_browsing():
