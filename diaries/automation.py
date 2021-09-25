@@ -35,52 +35,54 @@ def add_summary_to_readme():
 
     gh = Github(access_token)
     repo = gh.get_repo(github_owner_and_repo_name)
-    # contents = repo.get_contents(target_dir)
+    contents = repo.get_contents(target_dir)
 
-    # content_file_paths = []
-    # summaries = []
-    # while contents:
-    #     content_file = contents.pop(0)
+    content_file_paths = []
+    summaries = []
+    while contents:
+        content_file = contents.pop(0)
 
-    #     content_file_path_after_trimming_dir = content_file.path[len(target_dir) + 1:]  # '1' is '/'.
-    #     content_file_paths.append(content_file_path_after_trimming_dir)
+        content_file_path_after_trimming_dir = content_file.path[len(target_dir) + 1:]  # '1' is '/'.
+        content_file_paths.append(content_file_path_after_trimming_dir)
 
-    #     bytes_content = content_file.decoded_content
-    #     str_content = bytes_content.decode('utf-8')
-    #     summary_obj = re.search(r'\[summary]\s.*', str_content)  # Extract summary.
-    #     try:
-    #         summary = summary_obj.group(0)
-    #     except AttributeError as err:
-    #         print(err)
-    #         continue
-    #     summary_with_blank_in_front = re.sub(r'\[summary]\s', '    ', summary)  # Adjust the appearance.
-    #     summaries.append(summary_with_blank_in_front)
+        bytes_content = content_file.decoded_content
+        str_content = bytes_content.decode('utf-8')
+        summary_obj = re.search(r'\[summary]\s.*', str_content)  # Extract summary.
+        try:
+            summary = summary_obj.group(0)
+        except AttributeError as err:
+            print(err)
+            continue
+        summary_with_blank_in_front = re.sub(r'\[summary]\s', '  --> ', summary)  # Adjust the appearance.
+        summaries.append(summary_with_blank_in_front)
 
-    # if len(content_file_paths) != len(summaries):
-    #     print('The number of files and summaries do not match. Review the summary in the file.')
-    #     return
+    if len(content_file_paths) != len(summaries):
+        print('The number of files and summaries do not match. Review the summary in the file.')
+        return
 
-    # correspondence_table = dict(zip(content_file_paths, summaries))
+    correspondence_table = dict(zip(content_file_paths, summaries))
 
-    # summary_list = []
-    # for key, item in correspondence_table.items():
-    #     summary_list.append(key)
-    #     summary_list.append(item)
-    # summary_sector = '\n'.join(summary_list)
-    # print(summary_sector)
+    summary_list = []
+    for key, item in correspondence_table.items():
+        summary_list.append(key)
+        summary_list.append(item)
+    summary_sector = '\n'.join(summary_list)
 
     readme = repo.get_readme()
-    print(readme.content)
     bytes_readme_content = readme.decoded_content
-    print(bytes_readme_content)
     str_readme_content = bytes_readme_content.decode('utf-8')
-    print(str_readme_content)
 
-    description_sector = re.findall('.....', str_readme_content)
-    whole_sentences = description_sector + str_readme_content
+    description_obj = re.search(r'###\sDescription.*', str_readme_content, flags=re.DOTALL)
+    try:
+        description_sector = description_obj.group(0)
+    except AttributeError as err:
+        print(err)
+        return
 
-    whole_sentences -> bytes_whole_sentences -> readme.content
-    readme.update()
+    full_text = description_sector + '\n' + summary_sector
+
+    # full_text -> bytes_whole_sentences -> readme.content
+    # readme.update()
 
 
 def auto_browsing():
