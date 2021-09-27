@@ -1,9 +1,33 @@
 [summary] The point is up to you.
 [en]
+Things is just objects that exist on the spot.
+People interpret the object based on the knowledge and experience they have gained so far.
+The point is that when interpreting the object, it does not perceive the object itself as it is, but adds empirical meaning.
+The fact that people give different meanings to the same object also creates room for debate.
+The discussion here is not taken into account whether there are absolute correct or incorrect answers.
+If this deviation is taken negatively, there is a risk of falling into an alternative idea that represents correct and incorrect answers.
+In the first place, the word negative is also an alternative.
 
+There is a lot of controversy about reading methods,
+but I think the important point is not the method, but how to understand the sentences in the book.
+Speed reading is good for inputting large amounts of information in a short period of time.
+But if you just literally input and don't have time to interact with yourself, I think the depth of understanding will be shallow.
+In addition to understanding the text in front of you, the most important thing to enrich the writing experience in your brain is
+to have the consciousness to capture the subtle texture that exudes from the meaning.
+Isn't it to have the feeling of confronting the text?
 [/en]
 
 
 [ja]
+物や事はただその場に存在している対象に過ぎません。人はこれまでに得た知識や経験に基づき、その対象を解釈します。
+ポイントはその対象を解釈する際、対象そのものをあるがままに知覚しているわけではなく、経験に基づいた意味を付け加えているということです。
+人は同じ対象に対して付与する意味が異なるということは、議論が発生する余地が生まれるということでもあります。
+ここでは絶対的な正解、不正解が存在するかどうかの議論は考慮に入れていません。
+このズレを否定的に捉えた場合、正解不正解を代表した二者択一思想に陥る危険性を孕んでいます。そもそも否定的という語も二者択一的ではありますが。
 
+読書手法には様々な論議が乱立していますが、重要な点は手法ではなく、本に記載されている文章をいかに理解するかではないかと考えています。
+速読は大量の情報を短期間にインプットするには適していますが、字義通りにただインプットするのみで自身と対話する時間を設けない場合、
+理解の深度は浅くなると思います。
+目の前の文章を理解することに加えて脳内の文字体験を豊かにする上で最も大切なことは、字義から滲み出る微妙な質感を捉える意識を持ちながら
+文章と対峙するという感覚を持っておくことではないでしょうか。
 [/ja]
