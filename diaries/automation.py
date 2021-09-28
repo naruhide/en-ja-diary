@@ -11,10 +11,9 @@ import argparse
 import os
 import re
 import subprocess
-import sys
 import webbrowser
-from zipfile import is_zipfile
 from zipfile import ZipFile
+from zipfile import is_zipfile
 
 try:
     from github import Github
