@@ -82,7 +82,7 @@ def readme_update():
         Keep the README.md up-to-date by extracting the name of each file and the summary contained within the file.
     """
 
-    # STEP1: Prepare param.
+    # STEP1: Prepare params.
     github_owner_and_repo_name = 'naruhide/en-ja-diary'
     access_token = os.environ['GIT_ACCESS_TOKEN']
     target_dir = 'diaries'
@@ -92,7 +92,7 @@ def readme_update():
     repo = gh.get_repo(github_owner_and_repo_name)
     contents = repo.get_contents(target_dir)
 
-    # STEP3: Extract each file path and summary.
+    # STEP3: Take the path and summary of each file, apply markdown notation, and create a correspondence table.
     content_file_paths = []
     summaries = []
     while contents:
