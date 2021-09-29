@@ -1,1 +1,1 @@
-[summary] Notes for ansible.
+[summary] Note for ansible.

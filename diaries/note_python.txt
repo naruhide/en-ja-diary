@@ -1,4 +1,4 @@
-[summary] Notes for python.
+[summary] Note for python.
 Sphinx
 https://www.sphinx-doc.org
 
