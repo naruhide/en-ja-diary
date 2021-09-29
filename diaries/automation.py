@@ -31,9 +31,9 @@ def auto_browsing():
     """
 
     urls = (
+        'https://github.com/naruhide/notes/blob/master/note_1.txt',
         'https://translate.google.com/?hl=ja&sl=ja&tl=en&op=translate',
         'https://renso-ruigo.com/',
-        'https://eowf.alc.co.jp/',
         'https://muumuu-mail.com/login',
         'https://github.com/naruhide/en-ja-diary/tree/master/diaries',
         'https://docs.python.org/ja/3/library/index.html',
