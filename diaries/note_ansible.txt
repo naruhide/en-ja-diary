@@ -1,1 +1,0 @@
-[summary] Note for ansible.
