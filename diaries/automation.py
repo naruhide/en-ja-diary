@@ -158,18 +158,12 @@ def unzip():
         python3 automation.py --zipfile ~/test1.zip /home/testuser/test2.zip
 
     """
-    # TODO: Function addition
-    # Measures against garbled characters.
-    # Decompression of password-protected files and multi-support.
-
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('--zipfile', nargs='*',
                         help='Absolute or relative path of the zip file you want to unzip. Multiple is possible.')
-    # parser.add_argument('--password', nargs='*',
-    #                     help='Password set in the zip file. If you use this option, limit the zipfile option to one.')
     args = parser.parse_args()
     zipfile_list = args.zipfile
-    # password_list = args.password
 
     if zipfile_list is None:
         return
